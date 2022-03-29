@@ -13,16 +13,16 @@ app.get('/', (req, res) => {
   const headers = {
     "Content-Type":"application/x-www-form-urlencoded"
   }
-
+  
   fetch(`https://api.betaseries.com/oauth/access_token?client_id=${API_KEY}&client_secret=${API_SECRET}&redirect_uri=http://localhost:4001&code=${req.query.code}`, {method: 'POST'})
   .then((res) => {
     return res.json()
   })
   .then(token => {
-    res.redirect(`http://localhost:3000/home/${token.access_token}`);
+    res.redirect(`http://localhost:8080/home/${token.access_token}`);
   })
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`App listening at http://localhost:${port}`);
 })
