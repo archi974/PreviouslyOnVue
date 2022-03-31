@@ -9,13 +9,19 @@ const routes = [
     component: RegisterView
   },
   {
-    path: '/home/:token',
+    path: '/home',
     name: 'home',
     params: true,
     // route level code-splitting
     // this generates a separate chunk (home.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "home" */ '../views/HomeView.vue')
+  },
+  {
+    path: '/select-profile/:token',
+    name: 'selectProfile',
+    params: true,
+    component: () => import(/* webpackChunkName: "selectProfile" */ '../views/SelectProfileView.vue')
   }
 ]
 

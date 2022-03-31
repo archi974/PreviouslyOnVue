@@ -19,7 +19,8 @@ app.get('/', (req, res) => {
     return res.json()
   })
   .then(token => {
-    res.redirect(`http://localhost:8080/home/${token.access_token}`);
+    // console.log(token)
+    res.redirect(`http://localhost:8080/select-profile/${token}`);
   })
 })
 

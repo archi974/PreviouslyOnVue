@@ -1,6 +1,7 @@
 <template>
   <div class="home">
       <p>HOME</p>
+      <!-- <input type="button" value="Vincent" v-on:click=""/> -->
   </div>
 </template>
 
