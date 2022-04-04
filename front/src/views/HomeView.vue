@@ -1,18 +1,17 @@
 <template>
   <div class="home">
-      <p>HOME</p>
-      <!-- <input type="button" value="Vincent" v-on:click=""/> -->
+    <Navbar />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
+import Navbar from '@/components/Navbar.vue'
 
-// export default {
-//   name: 'HomeView',
-//   components: {
-//     HelloWorld
-//   }
-// }
+export default {
+  name: 'HomeView',
+  components: {
+    Navbar
+  }
+}
 </script>
