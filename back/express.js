@@ -4,7 +4,7 @@ import fetch from "node-fetch"
 import dotenv from 'dotenv'
 dotenv.config({path: '.env'})
 const app = express()
-const port = 4001
+const port = 4000
 const API_KEY = process.env.API_KEY
 const API_SECRET = process.env.API_SECRET
 
@@ -14,13 +14,13 @@ app.get('/', (req, res) => {
     "Content-Type":"application/x-www-form-urlencoded"
   }
   
-  fetch(`https://api.betaseries.com/oauth/access_token?client_id=${API_KEY}&client_secret=${API_SECRET}&redirect_uri=http://localhost:4001&code=${req.query.code}`, {method: 'POST'})
+  fetch(`https://api.betaseries.com/oauth/access_token?client_id=${API_KEY}&client_secret=${API_SECRET}&redirect_uri=http://localhost:4000&code=${req.query.code}`, {method: 'POST'})
   .then((res) => {
     return res.json()
   })
   .then(token => {
     // console.log(token)
-    res.redirect(`http://localhost:8080/select-profile/${token}`);
+    res.redirect(`http://localhost:3000/select-profile/${token}`);
   })
 })
 
