@@ -1,8 +1,18 @@
 <template>
   <div>
-    <nav></nav>
+    <nav>
+      <div>
+        <img
+          src="https://static-assets.bamgrid.com/product/disneyplus/images/logo.1a56f51c764022ee769c91d894d44326.svg"
+          alt="logo disney"
+        />
+      </div>
+      <button type="submit">MODIFIER LES PROFILS</button>
+    </nav>
     <div class="main">
-      <h2>Qui est-ce ?</h2>
+      <div class="title-profile">
+        <h2>Qui est-ce ?</h2>
+      </div>
       <div class="block-profile">
         <div class="select-profile">
           <a href="/home">
@@ -16,6 +26,7 @@
         <div class="add-profile">
           <div class="plus">
             <a href="/select-avatar">
+            
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -41,84 +52,134 @@
   </div>
 </template>
 
+
+<script>
+export default {
+  name: 'IcBaseline123'
+}
+</script>
+
 <style>
-img {
-  height: 140px;
-  width: 140px;
-}
-.main {
-  color: #fff;
-  display: block;
-  text-align: center;
-  height: 100vh;
-  font-family: Avenir-Heavy, Arial, Helvetica, sans-serif;
-}
+@media (min-width: 768px) {
+  body {
+    background-color: #1b1d29;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 36px;
+    margin-top: 5px;
+  }
+  nav button {
+    background-color: rgb(64, 66, 73);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0px 24px;
+    height: 48px;
+  }
+  nav button:hover {
+    background-color: rgb(71, 74, 83);
+  }
 
-h2{
-  font-size: 32px;
-}
+  nav img {
+    height: 48px;
+    margin-right: auto;
+    width: auto;
+  }
 
-h3{ 
-  font-size: 24px;
-}
+  .select-profile img {
+    height: 140px;
+    width: 140px;
+  }
 
-body {
-  background-color: #1b1d29;
-  display: flex;
-  justify-content: center;
-}
+  .select-profile h3 {
+    text-align: center;
+  }
 
-.block-profile {
-  display: flex;
-  flex-flow: row wrap;
-}
+  .main {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-family: Avenir-Heavy, Arial, Helvetica, sans-serif;
+    padding-top: 75px;
+  }
 
-.select-profile {
-  display: flex;
-  flex-direction: column;
-  margin: 18px;
-}
+  .title-profile{
+    margin-bottom: 24px;
+  }
 
-.select-profile h3 {
-  margin-top: 1rem;
-}
+  h2 {
+    font-size: 32px;
+  }
 
-.add-profile {
-  margin: 18px;
-}
+  h3 {
+    font-size: 24px;
+  }
 
-.add-profile h3 {
-  color: #cacaca;
-  margin-top: 1.5rem;
-}
 
-.plus {
-  background-color: rgb(249, 249, 249, 0.1);
-  border-radius: 140px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 140px;
-  width: 140px;
-}
+  .block-profile {
+    display: flex;
+    flex-flow: row wrap;
+  }
 
-.plus:hover {
-  /* border: 4px solid #fff; */
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: #fff;
-}
+  .select-profile {
+    display: flex;
+    flex-direction: column;
+    margin: 18px;
+  }
 
-.plus a {
-  text-decoration: none;
-  color: #cacaca;
-  height: 48px;
-  width: 48px;
-  /* position: relative; */
-  /* transform: perspective(1px) translateY(-45); */
-}
+  .select-profile h3 {
+    margin-top: 1rem;
+  }
 
-.plus a svg {
-  height: 50px;
-  width: 50px;
+  .add-profile {
+    margin: 18px;
+    /* position: relative; */
+  }
+
+  .add-profile h3 {
+    color: #cacaca;
+    margin-top: 1.5rem;
+    /* position: relative; */
+  }
+
+  .plus {
+    background-color: rgb(249, 249, 249, 0.1);
+    border-radius: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    width: 140px;
+    transition: all 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+    /* position: relative; */
+  }
+
+  .plus:hover {
+    /* border: 4px solid #fff; */
+    /* background-color: rgb(255, 255, 255); */
+    border: 3px solid #fff;
+    transition: transform 0.3s;
+    transform: scale(1.045);
+    transform-origin: center;
+    /* position: absolute; */
+  }
+
+  .plus a {
+    text-decoration: none;
+    color: #cacaca;
+    height: 48px;
+    width: 48px;
+    /* position: relative; */
+    /* transform: perspective(1px) translateY(-45); */
+  }
+
+  .plus a svg {
+    height: 50px;
+    width: 50px;
+  }
 }
 </style>
