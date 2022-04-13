@@ -2,10 +2,12 @@
   <div>
     <nav>
       <div>
-        <img
-          src="https://static-assets.bamgrid.com/product/disneyplus/images/logo.1a56f51c764022ee769c91d894d44326.svg"
-          alt="logo disney"
-        />
+        <a href="/select-profile">
+          <img
+            src="https://static-assets.bamgrid.com/product/disneyplus/images/logo.1a56f51c764022ee769c91d894d44326.svg"
+            alt="logo disney"
+          />
+        </a>
       </div>
       <button type="submit">MODIFIER LES PROFILS</button>
     </nav>
@@ -26,7 +28,6 @@
         <div class="add-profile">
           <div class="plus">
             <a href="/select-avatar">
-            
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -55,8 +56,8 @@
 
 <script>
 export default {
-  name: 'IcBaseline123'
-}
+  name: "IcBaseline123",
+};
 </script>
 
 <style>
@@ -107,7 +108,7 @@ export default {
     padding-top: 75px;
   }
 
-  .title-profile{
+  .title-profile {
     margin-bottom: 24px;
   }
 
@@ -118,7 +119,6 @@ export default {
   h3 {
     font-size: 24px;
   }
-
 
   .block-profile {
     display: flex;

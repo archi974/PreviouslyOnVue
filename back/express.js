@@ -9,7 +9,6 @@ const API_KEY = process.env.API_KEY
 const API_SECRET = process.env.API_SECRET
 
 app.get('/', (req, res) => {
-  console.log(req.query.token);
   const headers = {
     "Content-Type":"application/x-www-form-urlencoded"
   }
@@ -19,8 +18,7 @@ app.get('/', (req, res) => {
     return res.json()
   })
   .then(token => {
-    // console.log(token)
-    res.redirect(`http://localhost:3000/select-profile/${token}`);
+    res.redirect(`http://localhost:3000/select-profile/${token.access_token}`);
   })
 })
 

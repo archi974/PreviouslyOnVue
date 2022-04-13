@@ -20,6 +20,12 @@ const router = createRouter({
       component: () => import("../views/SelectProfileView.vue")
     },
     {
+      path: '/select-profile/',
+      name: 'selectProfile',
+      params: true,
+      component: () => import("../views/SelectProfileView.vue")
+    },
+    {
       path: "/about",
       name: "about",
       component: () => import("../views/AboutView.vue"),
