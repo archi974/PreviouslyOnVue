@@ -26,8 +26,8 @@
           <h3>Vincent</h3>
         </div>
         <div class="add-profile">
-          <div class="plus">
-            <a href="/select-avatar">
+          <a href="/select-avatar">
+            <div class="plus">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -44,9 +44,9 @@
                   d="M18 12.998h-5v5a1 1 0 0 1-2 0v-5H6a1 1 0 0 1 0-2h5v-5a1 1 0 0 1 2 0v5h5a1 1 0 0 1 0 2z"
                 ></path>
               </svg>
-            </a>
-          </div>
-          <h3>Ajouter profil</h3>
+            </div>
+            <h3>Ajouter profil</h3>
+          </a>
         </div>
       </div>
     </div>
@@ -168,7 +168,7 @@ export default {
     /* position: absolute; */
   }
 
-  .plus a {
+  .add-profile a {
     text-decoration: none;
     color: #cacaca;
     height: 48px;
@@ -177,9 +177,9 @@ export default {
     /* transform: perspective(1px) translateY(-45); */
   }
 
-  .plus a svg {
+  /* .plus svg {
     height: 50px;
     width: 50px;
-  }
+  } */
 }
 </style>

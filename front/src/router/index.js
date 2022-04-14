@@ -15,7 +15,7 @@ const router = createRouter({
     },
     {
       path: '/select-profile/:token',
-      name: 'selectProfile',
+      name: 'selectProfileToken',
       params: true,
       component: () => import("../views/SelectProfileView.vue")
     },
