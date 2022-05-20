@@ -1,3 +1,9 @@
+<script>
+const regex = /select-profile\/([a-z0-9]{12})/
+const matches = window.location.pathname.match(regex)
+localStorage.setItem("token", matches[1]);
+</script>
+
 <template>
   <div>
     <nav>
@@ -22,8 +28,8 @@
               src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/263F418F2C47943D98B2877ECAD174927FBBD359C4AFB45BE0C6A22AD589D22E/scale?width=280&aspectRatio=1.00&format=png"
               alt="profile-image"
             />
-          </a>
           <h3>Vincent</h3>
+          </a>
         </div>
         <div class="add-profile">
           <a href="/select-avatar">
@@ -52,13 +58,6 @@
     </div>
   </div>
 </template>
-
-
-<script>
-export default {
-  name: "IcBaseline123",
-};
-</script>
 
 <style>
 @media (min-width: 768px) {
@@ -135,6 +134,16 @@ export default {
     margin-top: 1rem;
   }
 
+  .select-profile a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .select-profile img:hover{
+    border: 3px solid #fff;
+    border-radius: 50%;
+  }
+
   .add-profile {
     margin: 18px;
     /* position: relative; */
@@ -162,7 +171,7 @@ export default {
     /* border: 4px solid #fff; */
     /* background-color: rgb(255, 255, 255); */
     border: 3px solid #fff;
-    transition: transform 0.3s;
+    transition: all 0.4;
     transform: scale(1.045);
     transform-origin: center;
     /* position: absolute; */
