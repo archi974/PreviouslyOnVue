@@ -171,6 +171,8 @@ localStorage.setItem("token", matches[1]);
     /* border: 4px solid #fff; */
     /* background-color: rgb(255, 255, 255); */
     border: 3px solid #fff;
+    background-color: #74757C;
+    color: #fff;
     transition: all 0.4;
     transform: scale(1.045);
     transform-origin: center;
