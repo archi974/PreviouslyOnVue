@@ -125,8 +125,10 @@ export default {
 </script>
 
 <style>
+body { 
+  background-color: rgb(22, 23, 34);
+}
 .navigate {
-  padding: 0 16px;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -137,43 +139,27 @@ export default {
 .toggle-page {
   display: flex;
   flex: 1;
-  /* background: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    height: 100%;
-    -webkit-box-pack: center;
-    justify-content: center;
-    opacity: 0;
-    padding: 0px;
-    position: absolute;
-    top: 0px;
-    transform: translateX(-100%);
-    transition: opacity 0.2s ease 0s;
-    width: calc(3.5vw + 24px);
-    z-index: 1; */
 }
 
 .right {
   justify-content: flex-end;
 }
-
-.navigate svg {
+.toggle-page svg {
+  opacity: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
   width: 40px;
-  height: 40px;
-  background-color: #6347c7;
+  height: 386px;
   color: #fff;
 }
-/* .toggle-page .left svg {
-  margin-top: 0px;
-  width: 40px !important;
-  height: 40px !important;
-} */
+
+.toggle-page svg:hover {
+  opacity: 1;
+}
+
+/* .left {} */
 
 .pagination {
   position: absolute;
@@ -181,8 +167,9 @@ export default {
   width: 100%;
   display: flex;
   gap: 16px;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
+  padding-right: 60px;
 }
 
 .pagination span {
